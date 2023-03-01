@@ -26,19 +26,19 @@ also please print the value of the attribute type of the button GET TOTAL
 
         driver.findElement(By.xpath("//input[contains(@placeholder,'Please enter')]")).sendKeys("Tester");
         driver.findElement(By.xpath("//button[contains(@onclick,'showInput()')]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//input[@id='sum1']")).sendKeys("20");
-        driver.findElement(By.xpath("//input[@id='sum2']")).sendKeys("30");
-        Thread.sleep(1000);
+        driver.findElement(By.xpath("//input[@id='sum1']")).sendKeys("10");
+        driver.findElement(By.xpath("//input[@id='sum2']")).sendKeys("10");
+        Thread.sleep(2000);
 
         driver.findElement(By.xpath("//button[text()= 'Get Total']")).click();
         String totalValue = driver.findElement(By.xpath("//span[@id='displayvalue']")).getText();
 
         System.out.println("Total value of a + b = " + totalValue);
 
-        Thread.sleep(3000);
-       // driver.quit();
+        Thread.sleep(2000);
+        driver.quit();
 
 
     }
