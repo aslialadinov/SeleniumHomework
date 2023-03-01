@@ -9,7 +9,7 @@ public class Task2 {
    HW2
    navigate to fb.com
    click on create new account
-   fill up all the textboxes
+   fill up all the text-boxes
    click on sign up button
    close the pop-up
    close the browser
