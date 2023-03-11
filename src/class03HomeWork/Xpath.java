@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Xpath {
+public class                                                         Xpath {
     /*
     use xpath to complete this
 goto http://practice.syntaxtechs.net/basic-first-form-demo.php
@@ -18,9 +18,9 @@ Enter value of B
 click on the button get total
 also please print the value of the attribute type of the button GET TOTAL
    */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {                                 
         System.setProperty("webdriver.chrome.driver","Driver/chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver=new ChromeDriver();                                                             
         driver.get("http://practice.syntaxtechs.net/basic-first-form-demo.php");
         driver.manage().window().maximize();
 
