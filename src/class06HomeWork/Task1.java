@@ -15,31 +15,24 @@ public class Task1 {
         5.Verify that the text "Hello World!" is now displayed on the page (edited)
 */
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
 
-        //        create an instance of WebDriver
-        WebDriver driver = new ChromeDriver();
-//        max the window
+        System.setProperty("webdriver.chrome.driver","Driver/chromedriver.exe");
+        WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
-        //go to syntaxprojects.com
+
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        // identify element and click
-        // driver.findElement(By.xpath("//*[@id='start']")).click();
-        // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//button")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+
+        driver.findElement(By.xpath("//button[text()='Start']")).click();
+
         driver.findElement(By.xpath("//div[@id='finish']")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//h4"));
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.close();
-        System.out.println("Hello World");
 
+        WebElement text=driver.findElement(By.xpath("//h4[text()='Hello World!']"));
 
-
+        System.out.println("Hello world is displayed:  "+text.getText());
 
 
     }
+
 }
